@@ -1,6 +1,6 @@
 import random
 
-dice_rolls = 2
+dice_rolls = int(input('How many dice would you like to roll? '))
 
 def main():
     dice_sum = 0
@@ -11,8 +11,15 @@ def main():
         
         dice_sum += roll #or dice_sum = dice_sum + roll 
         
-        print(f'You rolled a {roll}')
+        if roll == 1:
+            print(f'Unlucky af ya rolled da {roll}')
+            
+        elif roll == 6: #i see no point in that elif tbh
+            print(f'Congrats bruh ya rolled da {roll}')
+            
+        else:
+            print(f'You rolled a {roll}')
         
-        print(f'You have rolled a total of {dice_sum}')
-
+    print(f'You have rolled a total of {dice_sum}')
+        
 main()
